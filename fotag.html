@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fotag!</title>
+
+    <!--
+    All of your CSS must go in css/fotag.css. Do not add styles to individual elements.
+    All of your CSS must be your own -- you may not use third-party CSS, like Bootstrap.
+    -->
+    <link rel="stylesheet" href="css/fotag.css"/>
+    <style>
+        .marking-button {
+            float:right;
+        }
+        .marking-div-clear {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+
+<!-- This header can be replaced -->
+<div id="toolbar-container">
+
+</div>
+
+<div id="app-container" class="grid-view">
+    <!--
+         An attachment point to place all of your dynamically created content. Do not remove or
+         rename this div.
+    -->
+    <div id="file-chooser-container">
+    </div>
+    <div id="image-container">
+    </div>
+</div>
+<div id="enlarged-image-container" class="hidden">
+    <img id="enlarged-image" src=""></img>
+</div>
+
+<!-- A template for a file chooser, to select multiple files. See FileChooser in view.js. -->
+<template id="file-chooser">
+    <p>Select images to upload: </p>
+    <input type="file" class="files-input" name="file_results[]" multiple />
+    <output id="list"></output>
+</template>
+
+<template id="image-info">
+    <img class="thumbnails" src=""/>
+    <div class="details">
+        <p class="captions"></p>
+        <p class="dates"></p>
+        <div class="ratings-filled">
+            <p class="filled-stars stars">&#9733</p>
+            <p class="filled-stars stars">&#9733</p>
+            <p class="filled-stars stars">&#9733</p>
+            <p class="filled-stars stars">&#9733</p>
+            <p class="filled-stars stars">&#9733</p>
+        </div>
+        <div class="ratings">
+            <p class="stars star5">&#9734</p>
+            <p class="stars star4">&#9734</p>
+            <p class="stars star3">&#9734</p>
+            <p class="stars star2">&#9734</p>
+            <p class="stars star1">&#9734</p>
+        </div>
+    </div>
+</template>
+
+<template id="toolbar">
+    <div class="grid-view-btn buttons">
+        <p>&#9634</p><p>&#9634</p><br/>
+        <p>&#9634</p><p>&#9634</p>
+    </div>
+    <div class="list-view-btn buttons">
+        <p>&#9634</p><p>=</p><br/>
+        <p>&#9634</p><p>=</p>
+    </div>
+    <h1>Fotag!</h1>
+    <div class="filter-by-container">
+        <p>Filter by: </p>
+        <div class="ratings-filled">
+            <p class="filled-stars stars">&#9733</p>
+            <p class="filled-stars stars">&#9733</p>
+            <p class="filled-stars stars">&#9733</p>
+            <p class="filled-stars stars">&#9733</p>
+            <p class="filled-stars stars">&#9733</p>
+        </div>
+        <div class="ratings">
+            <p class="stars star5">&#9734</p>
+            <p class="stars star4">&#9734</p>
+            <p class="stars star3">&#9734</p>
+            <p class="stars star2">&#9734</p>
+            <p class="stars star1">&#9734</p>
+        </div>
+    </div>
+</template>
+
+<!-- Keep this here so TAs can run your unit tests -->
+<div id="unit-tests">
+
+    <!-- This button is for marking purposes to test your architecture. Do not remove it-->
+    <button class="marking-button">Mark Me!</button>
+    <div class="marking-div-clear"></div>
+
+    <a href="unit_tests.html">Run Unit Tests</a>
+</div>
+
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/fotag.js"></script>
+</body>
+</html>
